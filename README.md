@@ -1,9 +1,13 @@
-# Template :pineapple:
+# UI Table :honeybee:
 
-This is a template to start new projects.
+A mobile friendly and accessible table.
+
+---
+
+## Get Started
 
 ```bash
-git clone git@github.com:angelajholden/template.git
+git clone git@github.com:angelajholden/ui-table.git
 
 npm install
 ```
