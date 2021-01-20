@@ -10,7 +10,7 @@ html {
 
 body {
 	margin: 0;
-	padding: 0;
+	padding: 0 25px;
 	font-family: "Helvetica", "Arial", sans-serif;
 	font-size: 100%;
 	font-weight: 400;
@@ -18,16 +18,8 @@ body {
 	color: $black;
 }
 
-.screen-reader-text {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	clip: rect(0, 0, 0, 0);
-}
-
-.title {
-	font-weight: 300;
+a {
+	color: $teal;
 }
 
 .header,
@@ -35,65 +27,102 @@ body {
 	text-align: center;
 }
 
+.title {
+	font-weight: 300;
+}
+
 .main {
-	max-width: 800px;
+	max-width: 1000px;
 	margin: 0 auto;
-	padding: 0 25px;
 }
 
 .table {
 	width: 100%;
+	text-align: left;
 	border-collapse: collapse;
+
+	tr {
+		border-left: 1px solid $gray;
+		border-right: 1px solid $gray;
+		border-bottom: 4px dotted $blue;
+
+		&:nth-of-type(even) {
+			background-color: $off-white;
+		}
+
+		@media (max-width: 768px) {
+			border-bottom: none;
+
+			&:nth-of-type(even) {
+				background-color: transparent;
+			}
+		}
+	}
 
 	th,
 	td {
-		padding: 10px 15px;
-		border: 1px solid $black;
+		padding: 10px;
+		font-weight: 400;
+
+		&[scope="row"] {
+			color: $purple;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
 
 		@media (max-width: 768px) {
 			display: block;
-			padding: 0;
-			font-weight: 400;
-			text-align: left;
-			border: none;
-			border-bottom: 1px solid $gray;
+			border-bottom: 4px dotted $blue;
 
-			span {
-				display: inline-block;
-				padding: 10px 15px;
+			&[scope="row"] {
+				color: $white;
+				background-color: $purple;
+				border-bottom: none;
+
+				&::before {
+					// content: attr(data-label) ":";
+					// margin-right: 5px;
+					// display: inline;
+					color: $white;
+				}
 			}
 
 			&::before {
 				content: attr(data-label);
 				display: block;
-				// margin: 0 0 10px;
-				padding: 10px 15px;
+				color: $purple;
 				text-transform: uppercase;
 				letter-spacing: 1px;
-				color: $white;
-				background-color: $purple;
+			}
+
+			&:last-of-type {
+				border-bottom: none;
+			}
+
+			&:nth-of-type(even) {
+				background-color: $off-white;
 			}
 		}
 	}
 
 	thead {
+		tr {
+			border-bottom: none;
+		}
+
 		th {
-			background-color: $primary;
+			background-color: $purple;
 			font-weight: 400;
 			text-transform: uppercase;
 			letter-spacing: 1px;
 			color: $white;
-			border-left: 1px solid $white;
-			border-right: 1px solid $white;
-			border-top: 1px solid $primary;
-			border-bottom: 1px solid $primary;
 
 			&:first-of-type {
-				border-left: 1px solid $primary;
+				border-left: 1px solid $purple;
 			}
 
 			&:last-of-type {
-				border-right: 1px solid $primary;
+				border-right: 1px solid $purple;
 			}
 		}
 
