@@ -8,7 +8,7 @@ function tableData() {
 		const table = document.querySelector(".table");
 
 		const keys = Object.keys(parseData[0]);
-		console.log(keys.splice(1, 5));
+		// console.log(keys.splice(1, 5));
 
 		const headName = keys[1];
 		const headUser = keys[2];
