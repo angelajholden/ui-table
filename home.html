@@ -1,37 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Github Template</title>
-        <link rel="stylesheet" href="dist/css/styles.min.css" />
-    </head>
-    <body>
-        <header>
-            <h1>Github Template</h1>
-        </header>
 
-        <main>
-            <p>This is a template to start new projects.</p>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI Table</title>
+    <link rel="stylesheet" href="dist/css/styles.min.css" />
+</head>
 
-            <p>
-                <a href="https://github.com/angelajholden/template"
-                    >Github Repo</a
-                >
-            </p>
+<body>
+    <header class="header">
+        <h1 class="title">UI Table</h1>
+        <p>Responsive, Accessible & Dynamic HTML5 Table</p>
+    </header>
 
-            <code>
-                <pre>git clone git@github.com:angelajholden/template.git</pre>
-                <pre>npm install</pre>
-            </code>
-        </main>
+    <main class="main">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">header col</th>
+                    <th scope="col">header col</th>
+                    <th scope="col">header col</th>
+                    <th scope="col">header col</th>
+                    <th scope="col">header col</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th data-label="header col" scope="row"><span>table item</span></th>
+                    <td data-label="header col" scope="row"><span>table item</span></td>
+                    <td data-label="header col" scope="row"><span>table item</span></td>
+                    <td data-label="header col" scope="row"><span>table item</span></td>
+                    <td data-label="header col" scope="row"><span>table item</span></td>
+                </tr>
+                <tr>
+                    <th data-label="header col" scope="row"><span>table item</span></th>
+                    <td data-label="header col" scope="row"><span>table item</span></td>
+                    <td data-label="header col" scope="row"><span>table item</span></td>
+                    <td data-label="header col" scope="row"><span>table item</span></td>
+                    <td data-label="header col" scope="row"><span>table item</span></td>
+                </tr>
+                <tr>
+                    <th data-label="header col" scope="row"><span>table item</span></th>
+                    <td data-label="header col" scope="row"><span>table item</span></td>
+                    <td data-label="header col" scope="row"><span>table item</span></td>
+                    <td data-label="header col" scope="row"><span>table item</span></td>
+                    <td data-label="header col" scope="row"><span>table item</span></td>
+                </tr>
+                <tr>
+                    <th data-label="header col" scope="row"><span>table item</span></th>
+                    <td data-label="header col" scope="row"><span>table item</span></td>
+                    <td data-label="header col" scope="row"><span>table item</span></td>
+                    <td data-label="header col" scope="row"><span>table item</span></td>
+                    <td data-label="header col" scope="row"><span>table item</span></td>
+                </tr>
+                <tr>
+                    <th data-label="header col" scope="row"><span>table item</span></th>
+                    <td data-label="header col" scope="row"><span>table item</span></td>
+                    <td data-label="header col" scope="row"><span>table item</span></td>
+                    <td data-label="header col" scope="row"><span>table item</span></td>
+                    <td data-label="header col" scope="row"><span>table item</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
 
-        <footer>
-            <p>
-                Copyright &copy; <span id="date"></span> • Made in Saint Paul,
-                MN
-            </p>
-        </footer>
-        <script src="dist/js/scripts.min.js"></script>
-    </body>
+    <footer class="footer">
+        <p>Copyright &copy; <span id="date"></span> • Made in Saint Paul, MN</p>
+    </footer>
+    <script src="dist/js/scripts.min.js"></script>
+</body>
+
 </html>
