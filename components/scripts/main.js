@@ -47,23 +47,14 @@ function tableData() {
                 <div>${city}, ${zip}</div>
             `;
 
-			let data = Object.keys(parseData[i]);
-			// console.log(data.join(", "));
-
-			let dataName = data[1];
-			let dataUser = data[2];
-			let dataEmail = data[3];
-			let dataAddress = data[4];
-			let dataPhone = data[5];
-
 			tableBody += `
-            <tr>
-                <th data-label="${dataName}" scope="row">${name}</th>
-                <td data-label="${dataUser}">${username}</td>
-                <td data-label="${dataEmail}">${email}</td>
-                <td data-label="${dataAddress}">${address}</td>
-                <td data-label="${dataPhone}">${phone}</td>
-            </tr>
+                <tr>
+                    <th data-label="${headName}" scope="row">${name}</th>
+                    <td data-label="${headUser}">${username}</td>
+                    <td data-label="${headEmail}">${email}</td>
+                    <td data-label="${headAddress}">${address}</td>
+                    <td data-label="${headPhone}">${phone}</td>
+                </tr>
             `;
 		}
 
