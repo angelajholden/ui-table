@@ -1,22 +1,22 @@
 function tableData() {
-	let request = new XMLHttpRequest();
+	const request = new XMLHttpRequest();
 	request.open("GET", "https://jsonplaceholder.typicode.com/users");
 	request.onload = () => {
-		let response = request.response;
-		let parseData = JSON.parse(response);
+		const response = request.response;
+		const parseData = JSON.parse(response);
 
-		let table = document.querySelector(".table");
+		const table = document.querySelector(".table");
 
-		let keys = Object.keys(parseData[0]);
-		// console.log(keys.join(", "));
+		const keys = Object.keys(parseData[0]);
+		console.log(keys.splice(1, 5));
 
-		let headName = keys[1];
-		let headUser = keys[2];
-		let headEmail = keys[3];
-		let headAddress = keys[4];
-		let headPhone = keys[5];
+		const headName = keys[1];
+		const headUser = keys[2];
+		const headEmail = keys[3];
+		const headAddress = keys[4];
+		const headPhone = keys[5];
 
-		let tableHead = `
+		const tableHead = `
 		    <th scope="col">${headName}</th>
 		    <th scope="col">${headUser}</th>
 		    <th scope="col">${headEmail}</th>
@@ -24,24 +24,24 @@ function tableData() {
 		    <th scope="col">${headPhone}</th>
 		`;
 
-		let tr = document.getElementById("tr");
+		const tr = document.getElementById("tr");
 		if (table) {
 			tr.innerHTML = tableHead;
 		}
 
 		let tableBody = "";
 		for (let i = 0; i < parseData.length; i++) {
-			let name = parseData[i].name;
-			let username = parseData[i].username;
-			let email = parseData[i].email;
-			let phone = parseData[i].phone;
+			const name = parseData[i].name;
+			const username = parseData[i].username;
+			const email = parseData[i].email;
+			const phone = parseData[i].phone;
 
-			let street = parseData[i].address.street;
-			let suite = parseData[i].address.suite;
-			let city = parseData[i].address.city;
-			let zip = parseData[i].address.zipcode;
+			const street = parseData[i].address.street;
+			const suite = parseData[i].address.suite;
+			const city = parseData[i].address.city;
+			const zip = parseData[i].address.zipcode;
 
-			let address = `
+			const address = `
                 <div>${street}</div>
                 <div>${suite}</div>
                 <div>${city}, ${zip}</div>
@@ -58,7 +58,7 @@ function tableData() {
             `;
 		}
 
-		let tbody = document.getElementById("tbody");
+		const tbody = document.getElementById("tbody");
 		if (table) {
 			tbody.innerHTML = tableBody;
 		}
@@ -67,9 +67,11 @@ function tableData() {
 }
 
 function copyrightYear() {
-	let c = document.getElementById("date");
-	let d = new Date();
-	c.innerHTML = d.getFullYear();
+	const current = document.getElementById("date");
+	const date = new Date();
+	if (current) {
+		current.innerHTML = date.getFullYear();
+	}
 }
 
 window.onload = () => {
