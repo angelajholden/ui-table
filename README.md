@@ -4,6 +4,17 @@ A mobile friendly and accessible table.
 
 ---
 
+## Resources
+
+-   https://jsonplaceholder.typicode.com/
+-   https://jsonplaceholder.typicode.com/users
+-   https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
+-   https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes
+-   https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table#scoping_rows_and_columns
+-   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
+
+---
+
 ## Get Started
 
 ```bash
@@ -14,9 +25,15 @@ npm install
 
 ---
 
-## Heroku Ready!
+## Grunt
 
-This can be easily deployed to Heroku as a `php` app.
+Run `grunt` on the terminal to compile SCSS and JS.
+
+---
+
+## Heroku
+
+Deployed to Heroku as a `php` app.
 
 ```php
 <?php
