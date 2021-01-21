@@ -11,7 +11,7 @@ html {
 body {
 	margin: 0;
 	padding: 0 10px;
-	font-family: "Helvetica", "Arial", sans-serif;
+	font-family: $poppins;
 	font-size: 100%;
 	font-weight: 400;
 	line-height: 1.75;
@@ -25,10 +25,6 @@ a {
 .header,
 .footer {
 	text-align: center;
-}
-
-.title {
-	font-weight: 300;
 }
 
 .main {
@@ -112,7 +108,6 @@ a {
 
 		th {
 			background-color: $purple;
-			font-weight: 400;
 			text-transform: uppercase;
 			letter-spacing: 1px;
 			color: $white;
@@ -130,7 +125,7 @@ a {
 			position: absolute;
 			width: 1px;
 			height: 1px;
-			margin: -1;
+			margin: -1px;
 			clip: rect(0 0 0 0);
 		}
 	}
